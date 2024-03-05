@@ -1,0 +1,50 @@
+Title: Zig-zag
+Date: 2024-03-04 10:01
+Modified: 2024-03-04 10:01
+Authors: Al Sweigart
+Summary: A simple back and forth animation.
+
+"Zig-zag" is just about the simplest scroll art you can have, and was one of the first ones Al Sweigart wrote. It was originally written for his [The Big Book of Small Python Projects](https://inventwithpython.com/bigbookpython/) but was later cut.
+
+* [View fullscreen](/static/zigzag-fullscreen.html)
+* [Python source code](https://github.com/asweigart/scrollart/blob/main/python/zigzag.py)
+* [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/zigzag.ts)
+
+<div><textarea id="bextOutput" readonly style="height: 400px;"></textarea><br /><button type="button" onclick="running = !running;">&#x23FB; Off</button></div>
+<script src="/static/bext.js"></script><link rel="stylesheet" href="/static/bext.css">
+<script>
+
+bextRowBuffer = 256;  // Change this to whatever size you want, or -1 for infinite buffer.
+const DELAY = 60;
+
+let width = 80;
+let line = '';
+
+let ZIG_NUM_CHARS = 8;
+let ZIG_CHAR = '*';
+
+let running = true;
+let indentSize = 0;
+
+async function main() {
+    while (running) {
+        //width = 80; // TODO add a getWidth() kind of function to bextjs
+
+        for (let i = 0; i < width - ZIG_NUM_CHARS; i++) {
+            print(' '.repeat(indentSize), ZIG_CHAR.repeat(ZIG_NUM_CHARS));
+            indentSize += 1;
+            await sleep(DELAY);
+            if (!running) break;
+        }
+
+        for (let i = 0; i < width - ZIG_NUM_CHARS; i++) {
+            print(' '.repeat(indentSize), ZIG_CHAR.repeat(ZIG_NUM_CHARS));
+            indentSize -= 1;
+            await sleep(DELAY);
+            if (!running) break;
+        }
+    }
+}
+
+main();
+</script>
