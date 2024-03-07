@@ -12,6 +12,7 @@ Summary: <a href="{filename}cube-wall.md">Random cube wallpaper.<br><img src="{s
 * **[VIEW FULLSCREEN](/static/cubewall-fullscreen.html)**
 * [Python source code](https://github.com/asweigart/scrollart/blob/main/python/cubewall.py)
 * [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/cubewall.ts)
+* [JavaScript source code in JSFiddle](https://jsfiddle.net/asweigart/5Lz0wfbr/)
 
 <div><textarea id="bextOutput" readonly style="height: 400px;"></textarea><br /><button type="button" onclick="running = !running;">&#x23FB; Off</button></div>
 <script src="/static/bext.js"></script><link rel="stylesheet" href="/static/bext.css">

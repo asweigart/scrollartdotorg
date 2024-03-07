@@ -11,6 +11,7 @@ Summary: <a href="{filename}starfield.md">Asterisks in cycles of density.<br><im
 * **[VIEW FULLSCREEN](/static/starfield-fullscreen.html)**
 * [Python source code](https://github.com/asweigart/scrollart/blob/main/python/starfield.py)
 * [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/starfield.ts)
+* [JavaScript source code in JSFiddle](https://jsfiddle.net/asweigart/6bLte9gq/)
 
 
 <div><textarea id="bextOutput" readonly style="height: 400px;"></textarea><br /><button type="button" onclick="running = !running;">&#x23FB; Off</button></div>

@@ -11,6 +11,7 @@ Summary: <a href="{filename}striped-triangles.md">Striped triangles in cyclic de
 * **[VIEW FULLSCREEN](/static/stripedtriangles-fullscreen.html)**
 * [Python source code](https://github.com/asweigart/scrollart/blob/main/python/stripedtriangles.py)
 * [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/stripedtriangles.ts)
+* [JavaScript source code in JSFiddle](https://jsfiddle.net/asweigart/f1pwqtez/)
 
 <textarea id="bextOutput" readonly style="height: 400px;"></textarea><br />
 <button type="button" onclick="running = !running;">&#x23FB; Off</button>

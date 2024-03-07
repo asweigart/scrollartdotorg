@@ -45,7 +45,7 @@ CATEGORY_SAVE_AS = 'category/{slug}/index.html'
 FILENAME_METADATA = '(?P<slug>.*?)\\.html'
 OUTPUT_PATH = '../output'
 FAVICON = '../favicon.ico'
-SITESUBTITLE = 'Exhibits of scrolling animated ASCII art.'
+SITESUBTITLE = 'Scroll art lets beginner programmers turn loops and print() into animated ASCII art.'
 DEFAULT_CATEGORY = 'Scroll Art Exhibits'
 STATIC_PATHS = ['static']
 

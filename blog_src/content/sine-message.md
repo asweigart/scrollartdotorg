@@ -11,6 +11,7 @@ Summary: <a href="{filename}sine-message.md">Text moving in a sine wave pattern.
 * **[VIEW FULLSCREEN](/static/sinemessage-fullscreen.html)**
 * [Python source code](https://github.com/asweigart/scrollart/blob/main/python/sinemessage.py)
 * [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/sinemessage.ts)
+* [JavaScript source code in JSFiddle](https://jsfiddle.net/asweigart/edoq7pu6/)
 
 <div><textarea id="bextOutput" readonly style="height: 400px;"></textarea><br /><button type="button" onclick="running = !running;">&#x23FB; Off</button></div>
 <script src="/static/bext.js"></script><link rel="stylesheet" href="/static/bext.css">

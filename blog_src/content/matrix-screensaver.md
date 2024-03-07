@@ -12,6 +12,7 @@ The Matrix is a 1999 hacker movie that had an iconic "digital stream" of green a
 * **[VIEW FULLSCREEN](/static/matrixscreensaver-fullscreen.html)**
 * [Python source code](https://github.com/asweigart/scrollart/blob/main/python/matrixscreensaver.py)
 * [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/matrixscreensaver.ts)
+* [JavaScript source code in JSFiddle](https://jsfiddle.net/asweigart/ha1fb9z3/)
 
 <div><textarea id="bextOutput" readonly style="height: 400px;"></textarea><br /><button type="button" onclick="running = !running;">&#x23FB; Off</button></div>
 <script src="/static/bext.js"></script><link rel="stylesheet" href="/static/bext.css">

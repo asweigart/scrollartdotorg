@@ -11,6 +11,7 @@ Summary: <a href="{filename}ducklings.md">Cute combinatorial explosion of ASCII 
 * **[VIEW FULLSCREEN](/static/ducklings-fullscreen.html)**
 * [Python source code](https://github.com/asweigart/scrollart/blob/main/python/ducklings.py)
 * [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/ducklings.ts)
+* [JavaScript source code in JSFiddle](https://jsfiddle.net/asweigart/o4sgvucn/)
 
 <div><textarea id="bextOutput" readonly style="height: 400px;"></textarea><br /><button type="button" onclick="running = !running;">&#x23FB; Off</button></div>
 <script src="/static/bext.js"></script><link rel="stylesheet" href="/static/bext.css">

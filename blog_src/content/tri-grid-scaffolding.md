@@ -11,6 +11,7 @@ Summary: <a href="{filename}tri-grid-scaffolding.md">A triangular grid in cyclic
 * **[VIEW FULLSCREEN](/static/trigridscaffolding-fullscreen.html)**
 * [Python source code](https://github.com/asweigart/scrollart/blob/main/python/trigridscaffolding.py)
 * [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/trigridscaffolding.ts)
+* [JavaScript source code in JSFiddle](https://jsfiddle.net/asweigart/cod509ph/)
 
 <div><textarea id="bextOutput" readonly style="height: 400px;"></textarea><br /><button type="button" onclick="running = !running;">&#x23FB; Off</button></div>
 <script src="/static/bext.js"></script><link rel="stylesheet" href="/static/bext.css">
@@ -22,7 +23,6 @@ const DELAY = 60;
 let CHANGE_AMOUNT = 0.04;
 
 let running = true;
-let indentSize = 0;
 
 async function main() {
     let density = 0.0;

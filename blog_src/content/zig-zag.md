@@ -11,6 +11,7 @@ Summary: <a href="{filename}zig-zag.md">A simple back and forth animation.<br><i
 * **[VIEW FULLSCREEN](/static/zigzag-fullscreen.html)**
 * [Python source code](https://github.com/asweigart/scrollart/blob/main/python/zigzag.py)
 * [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/zigzag.ts)
+* [JavaScript source code in JSFiddle](https://jsfiddle.net/asweigart/bq6rLvpf/)
 
 <div><textarea id="bextOutput" readonly style="height: 400px;"></textarea><br /><button type="button" onclick="running = !running;">&#x23FB; Off</button></div>
 <script src="/static/bext.js"></script><link rel="stylesheet" href="/static/bext.css">

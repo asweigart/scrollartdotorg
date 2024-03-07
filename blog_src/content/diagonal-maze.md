@@ -11,6 +11,7 @@ Summary: <a href="{filename}diagonal-maze.md">The classic Commodore 64 pattern.<
 * **[VIEW FULLSCREEN](/static/diagonalmaze-fullscreen.html)**
 * [Python source code](https://github.com/asweigart/scrollart/blob/main/python/diagonalmaze.py)
 * [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/diagonalmaze.ts)
+* [JavaScript source code in JSFiddle](https://jsfiddle.net/asweigart/x2c4jkvp/)
 
 <div><textarea id="bextOutput" readonly style="height: 400px;"></textarea><br /><button type="button" onclick="running = !running;">&#x23FB; Off</button></div>
 <script src="/static/bext.js"></script><link rel="stylesheet" href="/static/bext.css">

@@ -13,12 +13,14 @@ Toggler 1:
 * **[VIEW FULLSCREEN](/static/toggler1-fullscreen.html)**
 * [Python source code](https://github.com/asweigart/scrollart/blob/main/python/toggler1.py)
 * [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/toggler1.ts)
+* [JavaScript source code in JSFiddle](https://jsfiddle.net/asweigart/q5hc9tLf/)
 
 Toggler 2:
 
 * **[VIEW FULLSCREEN](/static/toggler2-fullscreen.html)**
 * [Python source code](https://github.com/asweigart/scrollart/blob/main/python/toggler2.py)
 * [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/toggler2.ts)
+* [JavaScript source code in JSFiddle](https://jsfiddle.net/asweigart/t35mx9pc/)
 
 
 <div><textarea id="bextOutput" readonly style="height: 400px;"></textarea><br /><button type="button" onclick="running = !running;">&#x23FB; Off</button></div>

@@ -12,6 +12,7 @@ While "Spike" is a quickly repeating pattern, the exponential movement gives the
 * **[VIEW FULLSCREEN](/static/spike-fullscreen.html)**
 * [Python source code](https://github.com/asweigart/scrollart/blob/main/python/spike.py)
 * [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/spike.ts) 
+* [JavaScript source code in JSFiddle](https://jsfiddle.net/asweigart/eLhmxy9g/)
 
 <div><textarea id="bextOutput" readonly style="height: 400px;"></textarea><br /><button type="button" onclick="running = !running;">&#x23FB; Off</button></div>
 
