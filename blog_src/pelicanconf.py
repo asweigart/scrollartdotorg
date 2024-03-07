@@ -36,7 +36,12 @@ DEFAULT_PAGINATION = 20
 
 THEME = 'basic'
 ARTICLE_URL = '{slug}/'
-ARTICLE_SAVE_AS = '{slug}.html'
+ARTICLE_SAVE_AS = '{slug}/index.html'
+PAGE_URL = '{slug}/'
+PAGE_SAVE_AS = '{slug}/index.html'
+CATEGORY_URL = 'category/{slug}/'
+CATEGORY_SAVE_AS = 'category/{slug}/index.html'
+
 FILENAME_METADATA = '(?P<slug>.*?)\\.html'
 OUTPUT_PATH = '../output'
 FAVICON = '../favicon.ico'

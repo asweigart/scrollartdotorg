@@ -2,11 +2,13 @@ Title: Starfield
 Date: 2024-03-04 10:00
 Modified: 2024-03-04 10:00
 Authors: Al Sweigart
-Summary: Asterisks in cycles of density.
+Summary: <a href="{filename}starfield.md">Asterisks in cycles of density.<br><img src="{static}/images/starfield-screenshot.webp" style="max-width: 640px;"></a>
+
+<img src="{static}/images/starfield-screenshot.webp" style="max-width: 640px;">
 
 "Starfield" creates a simple field of asterisks that cycle in density from completely empty to completely full and back again. The speed, asterisk character, and density change rate can be customized.
 
-* [View fullscreen](/static/starfield-fullscreen.html)
+* **[VIEW FULLSCREEN](/static/starfield-fullscreen.html)**
 * [Python source code](https://github.com/asweigart/scrollart/blob/main/python/starfield.py)
 * [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/starfield.ts)
 

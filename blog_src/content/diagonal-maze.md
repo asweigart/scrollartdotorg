@@ -2,11 +2,13 @@ Title: Diagonal Maze
 Date: 2024-03-04 10:05
 Modified: 2024-03-04 10:05
 Authors: Al Sweigart
-Summary: The classic Commodore 64 pattern.
+Summary: <a href="{filename}diagonal-maze.md">The classic Commodore 64 pattern.<br><img src="{static}/images/diagonal-maze-screenshot.webp" style="max-width: 640px;"></a>
+
+<img src="{static}/images/diagonal-maze-screenshot.webp" style="max-width: 640px;">
 
 "Diagonal Maze" is a simple random distribution of the diagonal line characters. These are different from the / forward slash and \ backslashes because they connect the actual corners of the text cell boundaries. By randomly printing them, they naturally form a maze-like pattern. This is no solveable maze, of course,
 
-* [View fullscreen](/static/diagonalmaze-fullscreen.html)
+* **[VIEW FULLSCREEN](/static/diagonalmaze-fullscreen.html)**
 * [Python source code](https://github.com/asweigart/scrollart/blob/main/python/diagonalmaze.py)
 * [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/diagonalmaze.ts)
 

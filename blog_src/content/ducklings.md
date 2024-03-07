@@ -2,11 +2,13 @@ Title: Ducklings
 Date: 2024-03-04 10:04
 Modified: 2024-03-04 10:04
 Authors: Al Sweigart
-Summary: Cute combinatorial explosion of ASCII art ducks.
+Summary: <a href="{filename}ducklings.md">Cute combinatorial explosion of ASCII art ducks.<br><img src="{static}/images/ducklings-screenshot.webp" style="max-width: 640px;"></a><br>
+
+<img src="{static}/images/ducklings-screenshot.webp" style="max-width: 640px;">
 
 "Ducklings" generates a wide variety of duckling ASCII art. The ducklings have multiple possible directions (left or right), eyes (aloof, happy, or wide), bills (open or closed), wing direction (out, up, or down), and body size (chubby and very chubby) for 24 different styles.
 
-* [View fullscreen](/static/ducklings-fullscreen.html)
+* **[VIEW FULLSCREEN](/static/ducklings-fullscreen.html)**
 * [Python source code](https://github.com/asweigart/scrollart/blob/main/python/ducklings.py)
 * [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/ducklings.ts)
 

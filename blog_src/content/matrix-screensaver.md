@@ -2,12 +2,14 @@ Title: Matrix Screensaver
 Date: 2024-03-04 10:06
 Modified: 2024-03-04 10:06
 Authors: Al Sweigart
-Summary: Hacker-themed trails of ones and zeros.
+Summary: <a href="{filename}matrix-screensaver.md">Hacker-themed trails of ones and zeros.<br><img src="{static}/images/matrix-screensaver-screenshot.webp" style="max-width: 640px;"></a>
+
+<img src="{static}/images/matrix-screensaver-screenshot.webp" style="max-width: 640px;">
 
 The Matrix is a 1999 hacker movie that had an iconic "digital stream" of green alphanumerics scrolling down the screen like trails of rain down a window. Several [screensavers](https://en.wikipedia.org/wiki/Screensaver) were created to mimic this design. This scroll art follows suit, though streaming upwards due to the limitations of scroll art.
 
 
-* [View fullscreen](/static/matrixscreensaver-fullscreen.html)
+* **[VIEW FULLSCREEN](/static/matrixscreensaver-fullscreen.html)**
 * [Python source code](https://github.com/asweigart/scrollart/blob/main/python/matrixscreensaver.py)
 * [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/matrixscreensaver.ts)
 

@@ -2,12 +2,14 @@ Title: Spike
 Date: 2024-03-04 10:09
 Modified: 2024-03-04 10:09
 Authors: Al Sweigart
-Summary: A simple spike pattern.
+Summary: <a href="{filename}spike.md">A simple spike pattern.<br><img src="{static}/images/spike-screenshot.webp" style="max-width: 640px;"></a>
+
+<img src="{static}/images/spike-screenshot.webp" style="max-width: 640px;">
 
 While "Spike" is a quickly repeating pattern, the exponential movement gives the impression of rythmic growth and retraction.
 
 
-* [View fullscreen](/static/spike-fullscreen.html)
+* **[VIEW FULLSCREEN](/static/spike-fullscreen.html)**
 * [Python source code](https://github.com/asweigart/scrollart/blob/main/python/spike.py)
 * [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/spike.ts) 
 

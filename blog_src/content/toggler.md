@@ -2,19 +2,21 @@ Title: Toggler
 Date: 2024-03-04 10:07
 Modified: 2024-03-04 10:07
 Authors: Al Sweigart
-Summary: Triangular patterns toggled between two characters, with variants.
+Summary: <a href="{filename}toggler.md">Triangular patterns toggled between two characters, with variants.<br><img src="{static}/images/toggler1-screenshot.webp" style="max-width: 640px;"></a>
+
+<img src="{static}/images/toggler1-screenshot.webp" style="max-width: 640px;">
 
 In "Toggler 1", each column prints one of two characters. Randomly, a "toggler" appears and switches which character the column prints and then moves to the left or right. This creates triangle-shaped regions of toggled values. As more togglers spawn and overlap, the implied shapes become more chaotic and inscrutable. "Toggler 2" is similar, though it creates two togglers going in both directions, sometimes skipping one or two columns as they move.
 
 Toggler 1:
 
-* [View fullscreen](/static/toggler1-fullscreen.html)
+* **[VIEW FULLSCREEN](/static/toggler1-fullscreen.html)**
 * [Python source code](https://github.com/asweigart/scrollart/blob/main/python/toggler1.py)
 * [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/toggler1.ts)
 
 Toggler 2:
 
-* [View fullscreen](/static/toggler2-fullscreen.html)
+* **[VIEW FULLSCREEN](/static/toggler2-fullscreen.html)**
 * [Python source code](https://github.com/asweigart/scrollart/blob/main/python/toggler2.py)
 * [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/toggler2.ts)
 

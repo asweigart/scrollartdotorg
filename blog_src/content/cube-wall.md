@@ -2,12 +2,14 @@ Title: Cube Wall
 Date: 2024-03-04 10:03
 Modified: 2024-03-04 10:03
 Authors: Al Sweigart
-Summary: Random cube wallpaper.
+Summary: <a href="{filename}cube-wall.md">Random cube wallpaper.<br><img src="{static}/images/cube-wall-screenshot.webp" style="max-width: 640px;"></a>
+
+<img src="{static}/images/cube-wall-screenshot.webp" style="max-width: 640px;">
 
 "Cube Wall" has a subtly 3D look by adding random shading to the cubes it draws.
 
 
-* [View fullscreen](/static/cubewall-fullscreen.html)
+* **[VIEW FULLSCREEN](/static/cubewall-fullscreen.html)**
 * [Python source code](https://github.com/asweigart/scrollart/blob/main/python/cubewall.py)
 * [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/cubewall.ts)
 

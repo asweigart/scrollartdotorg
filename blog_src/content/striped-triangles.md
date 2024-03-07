@@ -2,11 +2,13 @@ Title: Striped Triangles
 Date: 2024-03-04 10:10
 Modified: 2024-03-04 10:10
 Authors: Al Sweigart
-Summary: Striped triangles in cyclic densities.
+Summary: <a href="{filename}striped-triangles.md">Striped triangles in cyclic densities.<br><img src="{static}/images/striped-triangles-screenshot.webp" style="max-width: 640px;"></a>
+
+<img src="{static}/images/striped-triangles-screenshot.webp" style="max-width: 640px;">
 
 "Striped Triangles" follows the increasing/decreasing density cycles of [Starfield]({filename}starfield.md) and a triangular grid structure like [Tri Grid Scaffolding]({filename}tri-grid-scaffolding.md). However, the triangles are one of four striped designs using the back and forward slashes. Notice how the triangles taken on a woven, wood-knot look at certain densities.
 
-* [View fullscreen](/static/stripedtriangles-fullscreen.html)
+* **[VIEW FULLSCREEN](/static/stripedtriangles-fullscreen.html)**
 * [Python source code](https://github.com/asweigart/scrollart/blob/main/python/stripedtriangles.py)
 * [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/stripedtriangles.ts)
 

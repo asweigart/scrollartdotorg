@@ -2,11 +2,13 @@ Title: Sine Message
 Date: 2024-03-04 10:04
 Modified: 2024-03-04 10:04
 Authors: Al Sweigart
-Summary: Text moving in a sine wave pattern.
+Summary: <a href="{filename}sine-message.md">Text moving in a sine wave pattern.<br><img src="{static}/images/sine-message-screenshot.webp" style="max-width: 640px;"></a>
+
+<img src="{static}/images/sine-message-screenshot.webp" style="max-width: 640px;">
 
 "Sine Message" is a simple text message that moves in a sine wave across the screen. The message, scroll speed, and wave speed are customizeable.
 
-* [View fullscreen](/static/sinemessage-fullscreen.html)
+* **[VIEW FULLSCREEN](/static/sinemessage-fullscreen.html)**
 * [Python source code](https://github.com/asweigart/scrollart/blob/main/python/sinemessage.py)
 * [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/sinemessage.ts)
 

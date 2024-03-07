@@ -2,11 +2,13 @@ Title: Zig-zag
 Date: 2024-03-04 10:01
 Modified: 2024-03-04 10:01
 Authors: Al Sweigart
-Summary: A simple back and forth animation.
+Summary: <a href="{filename}zig-zag.md">A simple back and forth animation.<br><img src="{static}/images/zig-zag-screenshot.webp" style="max-width: 640px;"></a>
+
+<img src="{static}/images/zig-zag-screenshot.webp" style="max-width: 640px;">
 
 "Zig-zag" is just about the simplest scroll art you can have, and was one of the first ones Al Sweigart wrote. It was originally written for his [The Big Book of Small Python Projects](https://inventwithpython.com/bigbookpython/) but was later cut.
 
-* [View fullscreen](/static/zigzag-fullscreen.html)
+* **[VIEW FULLSCREEN](/static/zigzag-fullscreen.html)**
 * [Python source code](https://github.com/asweigart/scrollart/blob/main/python/zigzag.py)
 * [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/zigzag.ts)
 

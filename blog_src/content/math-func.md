@@ -2,12 +2,14 @@ Title: Math Function
 Date: 2024-03-04 10:08
 Modified: 2024-03-04 10:08
 Authors: Al Sweigart
-Summary: Bitmap patterns based on Cartesian coordinate inputs to a math function.
+Summary: <a href="{filename}math-func.md">Bitmap patterns based on Cartesian coordinate inputs to a math function.<br><img src="{static}/images/math-func-screenshot.webp" style="max-width: 640px;"></a>
+
+<img src="{static}/images/math-func-screenshot.webp" style="max-width: 640px;">
 
 "Math Function" is a highly configurable, deterministic piece that paints a bitmap based on the output of a mathematical function given the X and Y coordinates as inputs. Al Sweigart has a blog post, ["Algorithmic Art with the BitFieldDraw Module"](https://inventwithpython.com/blog/2021/08/02/algorithmic-art-with-the-bitfielddraw-module/) that features the output of several functions. The function featured here is `(x ^ y) % 5`.
 
 
-* [View fullscreen](/static/mathfunc-fullscreen.html)
+* **[VIEW FULLSCREEN](/static/mathfunc-fullscreen.html)**
 * [Python source code](https://github.com/asweigart/scrollart/blob/main/python/mathfunc.py)
 * [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/mathfunc.ts)
 

@@ -2,11 +2,13 @@ Title: Tri Grid Scaffolding
 Date: 2024-03-04 10:11
 Modified: 2024-03-04 10:11
 Authors: Al Sweigart
-Summary: A triangular grid in cyclic densities.
+Summary: <a href="{filename}tri-grid-scaffolding.md">A triangular grid in cyclic densities.<br><img src="{static}/images/tri-grid-scaffolding-screenshot.webp" style="max-width: 640px;"></a>
+
+<img src="{static}/images/tri-grid-scaffolding-screenshot.webp" style="max-width: 640px;">
 
 "Tri Grid Scaffolding" presents a grid of triangles that is slowly filled in and then dismantled each cycle. 
 
-* [View fullscreen](/static/trigridscaffolding-fullscreen.html)
+* **[VIEW FULLSCREEN](/static/trigridscaffolding-fullscreen.html)**
 * [Python source code](https://github.com/asweigart/scrollart/blob/main/python/trigridscaffolding.py)
 * [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/trigridscaffolding.ts)
 
