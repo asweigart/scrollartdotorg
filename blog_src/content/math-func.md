@@ -3,16 +3,36 @@ Date: 2024-03-04 10:08
 Modified: 2024-03-04 10:08
 Authors: Al Sweigart
 Summary: <a href="{filename}math-func.md">Bitmap patterns based on Cartesian coordinate inputs to a math function.<br><img src="{static}/images/math-func-screenshot.webp" style="max-width: 640px;"></a>
+og_image: math-func-screenshot.webp
+og_description: Bitmap patterns based on Cartesian coordinate inputs to a math function.
 
 <img src="{static}/images/math-func-screenshot.webp" style="max-width: 640px;">
 
-"Math Function" is a highly configurable, deterministic piece that paints a bitmap based on the output of a mathematical function given the X and Y coordinates as inputs. Al Sweigart has a blog post, ["Algorithmic Art with the BitFieldDraw Module"](https://inventwithpython.com/blog/2021/08/02/algorithmic-art-with-the-bitfielddraw-module/) that features the output of several functions. The function featured here is `(x ^ y) % 5`.
+"Math Function" is a highly configurable, deterministic piece that paints a bitmap based on the output of a mathematical function given the X and Y coordinates as inputs. Al Sweigart has a blog post, ["Algorithmic Art with the BitFieldDraw Module"](https://inventwithpython.com/blog/2021/08/02/algorithmic-art-with-the-bitfielddraw-module/) that features the output of several functions. The function featured here is `(x ^ y) % 5`. This blog post was based on ideas from [Martin Kleppe's social media posts](https://threadreaderapp.com/thread/1378106731386040322?refresh=1627428184), which were covered in this [Metafilter post](https://www.metafilter.com/192164/Patterns).
 
+
+Math Function (x ^ y) % 5
 
 * **[VIEW FULLSCREEN](/static/mathfunc-fullscreen.html)**
 * [Python source code](https://github.com/asweigart/scrollart/blob/main/python/mathfunc.py)
 * [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/mathfunc.ts)
 * [JavaScript source code in JSFiddle](https://jsfiddle.net/asweigart/du8bhgnx/)
+
+
+Math Function (x & y) & (x ^ y) % 19
+
+* **[VIEW FULLSCREEN](/static/mathfunc2-fullscreen.html)**
+* [Python source code](https://github.com/asweigart/scrollart/blob/main/python/mathfunc2.py)
+* [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/mathfunc2.ts)
+* [JavaScript source code in JSFiddle](https://jsfiddle.net/asweigart/xdh8Lvny/)
+
+Math Function ((x | y) % 7)
+
+* **[VIEW FULLSCREEN](/static/mathfunc3-fullscreen.html)**
+* [Python source code](https://github.com/asweigart/scrollart/blob/main/python/mathfunc3.py)
+* [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/mathfunc3.ts)
+* [JavaScript source code in JSFiddle](https://jsfiddle.net/asweigart/6L8s9cxt/)
+
 
 <div><textarea id="bextOutput" readonly style="height: 400px;"></textarea><br /><button type="button" onclick="running = !running;">&#x23FB; Off</button></div>
 <script src="/static/bext.js"></script><link rel="stylesheet" href="/static/bext.css">
@@ -60,3 +80,4 @@ async function main() {
 
 main();
 </script>
+

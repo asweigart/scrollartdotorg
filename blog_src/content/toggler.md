@@ -3,6 +3,8 @@ Date: 2024-03-04 10:07
 Modified: 2024-03-04 10:07
 Authors: Al Sweigart
 Summary: <a href="{filename}toggler.md">Triangular patterns toggled between two characters, with variants.<br><img src="{static}/images/toggler1-screenshot.webp" style="max-width: 640px;"></a>
+og_image: toggler1-screenshot.webp
+og_description: Triangular patterns toggled between two characters, with variants.
 
 <img src="{static}/images/toggler1-screenshot.webp" style="max-width: 640px;">
 

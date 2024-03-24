@@ -3,6 +3,8 @@ Date: 2024-03-04 10:00
 Modified: 2024-03-04 10:00
 Authors: Al Sweigart
 Summary: <a href="{filename}starfield.md">Asterisks in cycles of density.<br><img src="{static}/images/starfield-screenshot.webp" style="max-width: 640px;"></a>
+og_image: starfield-screenshot.webp
+og_description: Asterisks in cycles of density.
 
 <img src="{static}/images/starfield-screenshot.webp" style="max-width: 640px;">
 

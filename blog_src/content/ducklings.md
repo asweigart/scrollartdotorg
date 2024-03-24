@@ -3,6 +3,8 @@ Date: 2024-03-04 10:04
 Modified: 2024-03-04 10:04
 Authors: Al Sweigart
 Summary: <a href="{filename}ducklings.md">Cute combinatorial explosion of ASCII art ducks.<br><img src="{static}/images/ducklings-screenshot.webp" style="max-width: 640px;"></a><br>
+og_image: ducklings-screenshot.webp
+og_description: Cute combinatorial explosion of ASCII art ducks.
 
 <img src="{static}/images/ducklings-screenshot.webp" style="max-width: 640px;">
 

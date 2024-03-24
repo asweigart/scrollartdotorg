@@ -3,6 +3,8 @@ Date: 2024-03-04 10:05
 Modified: 2024-03-04 10:05
 Authors: Al Sweigart
 Summary: <a href="{filename}diagonal-maze.md">The classic Commodore 64 pattern.<br><img src="{static}/images/diagonal-maze-screenshot.webp" style="max-width: 640px;"></a>
+og_image: diagonal-maze-screenshot.webp
+og_description: The classic Commodore 64 pattern.
 
 <img src="{static}/images/diagonal-maze-screenshot.webp" style="max-width: 640px;">
 

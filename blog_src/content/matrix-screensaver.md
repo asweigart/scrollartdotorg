@@ -3,6 +3,8 @@ Date: 2024-03-04 10:06
 Modified: 2024-03-04 10:06
 Authors: Al Sweigart
 Summary: <a href="{filename}matrix-screensaver.md">Hacker-themed trails of ones and zeros.<br><img src="{static}/images/matrix-screensaver-screenshot.webp" style="max-width: 640px;"></a>
+og_image: matrix-screensaver-screenshot.webp
+og_description: Hacker-themed trails of ones and zeros.
 
 <img src="{static}/images/matrix-screensaver-screenshot.webp" style="max-width: 640px;">
 

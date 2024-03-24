@@ -3,6 +3,8 @@ Date: 2024-03-04 10:03
 Modified: 2024-03-04 10:03
 Authors: Al Sweigart
 Summary: <a href="{filename}cube-wall.md">Random cube wallpaper.<br><img src="{static}/images/cube-wall-screenshot.webp" style="max-width: 640px;"></a>
+og_image: cube-wall-screenshot.webp
+og_description: Random cube wallpaper.
 
 <img src="{static}/images/cube-wall-screenshot.webp" style="max-width: 640px;">
 

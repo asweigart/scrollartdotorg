@@ -9,7 +9,7 @@ from pelicanconf import *
 
 # If your site is available via HTTPS, make sure SITEURL begins with https://
 SITEURL = "https://scrollart.org"
-RELATIVE_URLS = True
+#RELATIVE_URLS = True  # Had to set this to False so 
 
 FEED_ALL_ATOM = "feeds/all.atom.xml"
 CATEGORY_FEED_ATOM = "feeds/{slug}.atom.xml"

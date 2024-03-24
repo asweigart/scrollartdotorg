@@ -3,6 +3,8 @@ Date: 2024-03-04 10:10
 Modified: 2024-03-04 10:10
 Authors: Al Sweigart
 Summary: <a href="{filename}striped-triangles.md">Striped triangles in cyclic densities.<br><img src="{static}/images/striped-triangles-screenshot.webp" style="max-width: 640px;"></a>
+og_image: striped-triangles-screenshot.webp
+og_description: Striped triangles in cyclic densities.
 
 <img src="{static}/images/striped-triangles-screenshot.webp" style="max-width: 640px;">
 

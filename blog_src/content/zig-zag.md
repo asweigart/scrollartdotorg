@@ -3,6 +3,8 @@ Date: 2024-03-04 10:01
 Modified: 2024-03-04 10:01
 Authors: Al Sweigart
 Summary: <a href="{filename}zig-zag.md">A simple back and forth animation.<br><img src="{static}/images/zig-zag-screenshot.webp" style="max-width: 640px;"></a>
+og_image: zig-zag-screenshot.webp
+og_description: A simple back and forth animation.
 
 <img src="{static}/images/zig-zag-screenshot.webp" style="max-width: 640px;">
 

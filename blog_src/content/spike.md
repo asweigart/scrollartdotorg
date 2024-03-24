@@ -3,6 +3,8 @@ Date: 2024-03-04 10:09
 Modified: 2024-03-04 10:09
 Authors: Al Sweigart
 Summary: <a href="{filename}spike.md">A simple spike pattern.<br><img src="{static}/images/spike-screenshot.webp" style="max-width: 640px;"></a>
+og_image: spike-screenshot.webp
+og_description: A simple spike pattern.
 
 <img src="{static}/images/spike-screenshot.webp" style="max-width: 640px;">
 

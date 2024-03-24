@@ -3,6 +3,8 @@ Date: 2024-03-04 10:04
 Modified: 2024-03-04 10:04
 Authors: Al Sweigart
 Summary: <a href="{filename}sine-message.md">Text moving in a sine wave pattern.<br><img src="{static}/images/sine-message-screenshot.webp" style="max-width: 640px;"></a>
+og_image: sine-message-screenshot.webp
+og_description: Text moving in a sine wave pattern.
 
 <img src="{static}/images/sine-message-screenshot.webp" style="max-width: 640px;">
 

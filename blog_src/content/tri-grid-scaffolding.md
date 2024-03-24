@@ -3,6 +3,8 @@ Date: 2024-03-04 10:11
 Modified: 2024-03-04 10:11
 Authors: Al Sweigart
 Summary: <a href="{filename}tri-grid-scaffolding.md">A triangular grid in cyclic densities.<br><img src="{static}/images/tri-grid-scaffolding-screenshot.webp" style="max-width: 640px;"></a>
+og_image: tri-grid-scaffolding-screenshot.webp
+og_description: A triangular grid in cyclic densities.
 
 <img src="{static}/images/tri-grid-scaffolding-screenshot.webp" style="max-width: 640px;">
 
