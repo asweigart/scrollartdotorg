@@ -18,7 +18,7 @@ The [box-drawing characters](https://en.wikipedia.org/wiki/Box-drawing_character
 <div><textarea id="bextOutput" readonly style="height: 400px;"></textarea><br /><button type="button" onclick="running = !running;">&#x23FB; Off</button></div>
 
 <script src="/static/bext.js"></script><link rel="stylesheet" href="/static/bext.css">
-<script>
+<script>// SCROLL CODE
 
 
 let bextRowBuffer = 256;  // Change this to whatever size you want, or -1 for infinite buffer.

@@ -18,7 +18,7 @@ og_description: Asterisks in cycles of density.
 
 <div><textarea id="bextOutput" readonly style="height: 400px;"></textarea><br /><button type="button" onclick="running = !running;">&#x23FB; Off</button></div>
 <script src="/static/bext.js"></script><link rel="stylesheet" href="/static/bext.css">
-<script>
+<script>// SCROLL CODE
 
 bextRowBuffer = 256;  // Change this to whatever size you want, or -1 for infinite buffer.
 const DELAY = 60;

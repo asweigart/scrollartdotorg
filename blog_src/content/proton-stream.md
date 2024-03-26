@@ -2,9 +2,9 @@ Title: Proton Stream
 Date: 2024-03-23 10:00
 Modified: 2024-03-23 10:00
 Authors: Al Sweigart
-Summary: <a href="{filename}proton-stream.md">Lighting-like streams.<br><img src="{static}/images/proton-stream-screenshot.webp" style="max-width: 640px;"></a>
+Summary: <a href="{filename}proton-stream.md">Lighting streams from a ghost exterminator's device.<br><img src="{static}/images/proton-stream-screenshot.webp" style="max-width: 640px;"></a>
 og_image: proton-stream-screenshot.webp
-og_description: Lightning-like streams.
+og_description: Lighting streams from a ghost exterminator's device.
 
 <img src="{static}/images/proton-stream-screenshot.webp" style="max-width: 640px;">
 
@@ -17,14 +17,14 @@ Multiple streams that are always within a set range of each other.
 <div><textarea id="bextOutput" readonly style="height: 400px;"></textarea><br /><button type="button" onclick="running = !running;">&#x23FB; Off</button></div>
 
 <script src="/static/bext.js"></script><link rel="stylesheet" href="/static/bext.css">
-<script>
+<script>// SCROLL CODE:Proton Stream
 
 let bextRowBuffer = 256;  // Change this to whatever size you want, or -1 for infinite buffer.
 let running = true;
 
 // Constants for settings:
 const DELAY = 10;  // Pause after each row in milliseconds.
-const WIDTH = 200;  // Number of columns in output.
+const WIDTH = 60;  // Number of columns in output.
 const NUM_STREAMS = 5;  // Number of streams on the screen.
 const MAX_DISTANCE = NUM_STREAMS * 4;  // How many spaces streams must be within each other.
 const MOVE_CHANCE = 0.75;  // How often a stream tries to move left or right, rather than continue straight.

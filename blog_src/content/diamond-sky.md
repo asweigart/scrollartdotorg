@@ -4,11 +4,13 @@ Modified: 2024-03-23 10:00
 Authors: Al Sweigart
 Summary: <a href="{filename}diamond-sky.md">Diamonds of various sizes.<br><img src="{static}/images/diamond-sky-screenshot.webp" style="max-width: 640px;"></a>
 og_image: diamond-sky-screenshot.webp
-og_description: Diamonds of various sizes.
+og_description: Scroll art piece; Diamonds of various sizes.
 
 <img src="{static}/images/diamond-sky-screenshot.webp" style="max-width: 640px;">
 
-Diamonds of various sizes.
+This piece is based on [*Project 16 - Diamonds*](https://inventwithpython.com/bigbookpython/project16.html) from my free programming book, [*The Big Book of Small Python Projects*](https://inventwithpython.com/bigbookpython/project16.html) for creating ASCII art diamonds of various sizes. I wrote [*Diamond Sky*]({filename}diamond-sky.md) before I created [*Full of Squares*]({filename}full-of-squares.md) but they share similar styles.
+
+This is the first piece where the code has a `rows` array that contains the next few rows to display. If the program randomly generates a diamond that is 12 rows high, the `rows` array is expanded to fit the next 12 rows. This is a bit more advanced than the wallpaper TODO
 
 
 * **[VIEW FULLSCREEN](/static/diamond-sky-fullscreen.html)**
@@ -18,7 +20,7 @@ Diamonds of various sizes.
 <div><textarea id="bextOutput" readonly style="height: 400px;"></textarea><br /><button type="button" onclick="running = !running;">&#x23FB; Off</button></div>
 
 <script src="/static/bext.js"></script><link rel="stylesheet" href="/static/bext.css">
-<script>
+<script>// SCROLL CODE
 
 
 let bextRowBuffer = 256;  // Change this to whatever size you want, or -1 for infinite buffer.

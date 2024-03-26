@@ -12,14 +12,14 @@ In "Toggler 1", each column prints one of two characters. Randomly, a "toggler" 
 
 Toggler 1:
 
-* **[VIEW FULLSCREEN](/static/toggler1-fullscreen.html)**
+* **[VIEW FULLSCREEN](/static/toggler-1-fullscreen.html)**
 * [Python source code](https://github.com/asweigart/scrollart/blob/main/python/toggler1.py)
 * [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/toggler1.ts)
 * [JavaScript source code in JSFiddle](https://jsfiddle.net/asweigart/q5hc9tLf/)
 
 Toggler 2:
 
-* **[VIEW FULLSCREEN](/static/toggler2-fullscreen.html)**
+* **[VIEW FULLSCREEN](/static/toggler-2-fullscreen.html)**
 * [Python source code](https://github.com/asweigart/scrollart/blob/main/python/toggler2.py)
 * [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/toggler2.ts)
 * [JavaScript source code in JSFiddle](https://jsfiddle.net/asweigart/t35mx9pc/)
@@ -27,7 +27,7 @@ Toggler 2:
 
 <div><textarea id="bextOutput" readonly style="height: 400px;"></textarea><br /><button type="button" onclick="running = !running;">&#x23FB; Off</button></div>
 <script src="/static/bext.js"></script><link rel="stylesheet" href="/static/bext.css">
-<script>
+<script>// SCROLL CODE:Toggler 1
 
 bextRowBuffer = 256;  // Change this to whatever size you want, or -1 for infinite buffer.
 let width = 220;
@@ -79,3 +79,67 @@ async function main() {
 
 main();
 </script>
+
+<!-- This commented out code is so that the Pelican plugin can generate the fullscreen version of toggler2.
+<script>// SCROLL CODE:Toggler 2
+bextRowBuffer = 256;  // Change this to whatever size you want, or -1 for infinite buffer.
+let width = 220;
+let running = true;
+const DELAY = 50;
+const TRUE_CHAR = '@';
+const FALSE_CHAR = '.';
+const TOGGLER_DENSITY = 0.10;
+const MOVEMENTS = [1, 2, 3];
+
+async function main() {
+    let columnChars = Array.from({length: width}, () => false);
+    let togglers = [];
+
+    while (running) {
+        if (Math.random() < TOGGLER_DENSITY) {
+                let pos = Math.floor(Math.random() * width);
+                let mov = MOVEMENTS[Math.floor(Math.random() * MOVEMENTS.length)];
+                // Create the right-moving toggler:
+                togglers.push({
+                    position: pos, 
+                    movement: mov
+                });
+                // Create the left-moving toggler:
+                togglers.push({
+                    position: pos, 
+                    movement: -mov
+                });
+                // Toggler the starting column since the two togglers will cancel each other out:
+                columnChars[pos] = !columnChars[pos];
+            }
+
+
+        // Remove out of bounds togglers:
+        togglers = togglers.filter(toggler => toggler.position > 0 && toggler.position < width);
+
+        // Move the togglers and toggle the column chars:
+        for (let toggler of togglers) {
+            // Toggle the column:
+            columnChars[toggler.position] = !columnChars[toggler.position];
+
+            // Move the toggler:
+            toggler.position += toggler.movement;
+        }
+
+        // Print the columns:
+        let line = '';
+        for (let columnChar of columnChars) {
+            if (columnChar) {
+                line += TRUE_CHAR;
+            } else {
+                line += FALSE_CHAR;
+            }
+        }
+        print(line);
+        await sleep(DELAY);
+    }
+}
+
+main();
+</script>
+-->
