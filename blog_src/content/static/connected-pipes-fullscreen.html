@@ -8,7 +8,24 @@
 
 <textarea id="bextOutput" readonly style="height: calc(100vh - 40px); border: none;"></textarea><br />
 <!--<input id="bextInput" readonly />-->
-<button type="button" onclick="running = !running;">&#x23FB; Off</button>
+<button type="button" onclick="running = !running;">&#x23FB; Off</button>&nbsp;&nbsp;&nbsp;
+
+<input type="text" id="foregroundColorSetting" style="width: 70px">
+<input type="text" id="backgroundColorSetting" style="width: 70px">
+<button type="button" onclick="changeColorTheme(document.getElementById('foregroundColorSetting').value, document.getElementById('backgroundColorSetting').value)">&#x1F197;</button>
+<button type="button" onclick="swapColors();">&#x1F504;</button>&nbsp;&nbsp;&nbsp;&nbsp;
+
+<button type="button" onclick="changeColorTheme('black', 'white');">&#x1F4A1;</button>
+<button type="button" onclick="changeColorTheme('white', 'black');">&#x1F3B1;</button>
+<button type="button" onclick="changeColorTheme('white', '#A10901');">&#x2764;&#xFE0F;</button>
+<button type="button" onclick="changeColorTheme('#993D28', '#FCAF1B');">&#x1F36F;</button>
+<button type="button" onclick="changeColorTheme('#E7B6BF', '#924C38');">&#x1FAB5;</button>
+<button type="button" onclick="changeColorTheme('#F9F5D6', '#2E3672');">&#x1F327;&#xFE0F;</button>
+<button type="button" onclick="changeColorTheme('#1B2463', '#00003E');">&#x1F311;</button>
+<button type="button" onclick="changeColorTheme('#C2FA6F', '#554E80');">&#x1F9EA;</button>
+<button type="button" onclick="changeColorTheme('#FFE082', '#1565C0');">&#x1F324;&#xFE0F;</button>
+<button type="button" onclick="changeColorTheme('#00FF00', '#FF007F');">&#x1F349;</button>
+<button type="button" onclick="changeColorTheme('#9CD54A', '#4A5A20');">&#x1F334;</button>
 
 
 <script src="/static/bext.js"></script>
@@ -16,6 +33,44 @@
 
 
 <script>
+
+function setColorsBasedOnTextFields() {
+    let fg = document.getElementById('foregroundColorSetting').value;
+    let bg = document.getElementById('backgroundColorSetting').value;
+    changeColorTheme(fg, bg);
+}
+document.addEventListener('DOMContentLoaded', (event) => {
+document.getElementById('foregroundColorSetting').addEventListener('keydown', function(event) {
+    // Check if the Enter key was pressed
+    if (event.key === "Enter" || event.keyCode === 13) {
+        // Prevent the default action to avoid form submission or any other default behavior
+        event.preventDefault();
+        setColorsBasedOnTextFields();
+    }
+});
+document.getElementById('backgroundColorSetting').addEventListener('keydown', function(event) {
+    // Check if the Enter key was pressed
+    if (event.key === "Enter" || event.keyCode === 13) {
+        // Prevent the default action to avoid form submission or any other default behavior
+        event.preventDefault();
+        setColorsBasedOnTextFields();
+    }
+});
+});
+function changeColorTheme(foregroundColor, backgroundColor) {
+  document.body.style.backgroundColor = backgroundColor; 
+  document.getElementById('bextOutput').style.backgroundColor = backgroundColor;
+  document.getElementById('bextOutput').style.color = foregroundColor;
+  document.getElementById('foregroundColorSetting').value = foregroundColor;
+  document.getElementById('backgroundColorSetting').value = backgroundColor;
+}
+
+function swapColors() {
+  let fg = document.getElementById('foregroundColorSetting').value;
+  let bg = document.getElementById('backgroundColorSetting').value;
+  changeColorTheme(bg, fg);
+}
+
 
 let bextRowBuffer = 256;  // Change this to whatever size you want, or -1 for infinite buffer.
 let running = true;
