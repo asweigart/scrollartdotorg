@@ -1,13 +1,16 @@
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tri Grid Scaffolding Scroll Art</title>
+    <title>TriGridScaffolding</title>
 </head>
 <body>
 
-<textarea id="bextOutput" readonly style="height: calc(100vh - 40px); border: none;"></textarea><br />
-<!--<input id="bextInput" readonly />-->
+<textarea id="outputTextarea" class="tatjsOutput" readonly style="height: calc(100vh - 40px); border: none;"></textarea><br />
+
+<div id="fullscreenControls">
 <button type="button" onclick="running = !running;">&#x23FB; Off</button>&nbsp;&nbsp;&nbsp;
 
 <input type="text" id="foregroundColorSetting" style="width: 70px">
@@ -19,17 +22,20 @@
 <button type="button" onclick="changeColorTheme('white', 'black');">&#x1F3B1;</button>
 <button type="button" onclick="changeColorTheme('white', '#A10901');">&#x2764;&#xFE0F;</button>
 <button type="button" onclick="changeColorTheme('#993D28', '#FCAF1B');">&#x1F36F;</button>
-<button type="button" onclick="changeColorTheme('#E7B6BF', '#924C38');">&#x1FAB5;</button>
-<button type="button" onclick="changeColorTheme('#F9F5D6', '#2E3672');">&#x1F327;&#xFE0F;</button>
-<button type="button" onclick="changeColorTheme('#1B2463', '#00003E');">&#x1F311;</button>
+<button type="button" onclick="changeColorTheme('#1B2463', '#00003E');">&#x1F319;</button>
 <button type="button" onclick="changeColorTheme('#C2FA6F', '#554E80');">&#x1F9EA;</button>
 <button type="button" onclick="changeColorTheme('#FFE082', '#1565C0');">&#x1F324;&#xFE0F;</button>
+<button type="button" onclick="changeColorTheme('#E7B6BF', '#924C38');">&#x1FAB5;</button>
 <button type="button" onclick="changeColorTheme('#00FF00', '#FF007F');">&#x1F349;</button>
 <button type="button" onclick="changeColorTheme('#9CD54A', '#4A5A20');">&#x1F334;</button>
+<button type="button" onclick="changeColorTheme('#08FF08', '#111111');">&#x1F60E;</button>
 
+&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" onclick="document.getElementById('fullscreenControls').style.display = 'none'; document.getElementById('outputTextarea').style.height = '100vh';">X</button>
 
-<script src="/static/bext.js"></script>
-<link rel="stylesheet" href="/static/bext.css">
+</div>
+
+<script src="/static/textarea_terminal.js"></script>
+<link rel="stylesheet" href="/static/textarea_terminal.css">
 
 
 <script>
@@ -59,8 +65,8 @@ document.getElementById('backgroundColorSetting').addEventListener('keydown', fu
 });
 function changeColorTheme(foregroundColor, backgroundColor) {
   document.body.style.backgroundColor = backgroundColor; 
-  document.getElementById('bextOutput').style.backgroundColor = backgroundColor;
-  document.getElementById('bextOutput').style.color = foregroundColor;
+  document.getElementById('outputTextarea').style.backgroundColor = backgroundColor;
+  document.getElementById('outputTextarea').style.color = foregroundColor;
   document.getElementById('foregroundColorSetting').value = foregroundColor;
   document.getElementById('backgroundColorSetting').value = backgroundColor;
 }
@@ -72,13 +78,14 @@ function swapColors() {
 }
 
 
-bextRowBuffer = 256;  // Change this to whatever size you want, or -1 for infinite buffer.
+//TriGridScaffolding
+const tat = new Tatjs(document.getElementById('outputTextarea'));
+
 let width = 220
 const DELAY = 60;
 let CHANGE_AMOUNT = 0.04;
 
 let running = true;
-let indentSize = 0;
 
 async function main() {
     let density = 0.0;
@@ -131,15 +138,17 @@ async function main() {
                 }
             }
 
-            print(row1);
+            tat.print(row1);
             await sleep(DELAY);
-            print(row2);
+            tat.print(row2);
             await sleep(DELAY);
         }
     }
 }
 
 main();
+
+
 </script>
 
 </body>

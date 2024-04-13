@@ -10,9 +10,7 @@ Currently the Scroll Art Museum only has pieces from Al Sweigart. Email him with
 What is the Format for Contributions to the SAM?
 =================================================
 
-First, you should provide a GitHub link to your program or another website where the source code generally lives. This way viewers can find the latest version of your program.
-
-Second, you should provide a way to show sample output on the SAM web page.
+First, you should provide a GitHub link to your program or another website where the source code generally lives so viewers can always find the latest version. Second, you should provide a way to show sample output on the SAM web page.
 
 Ideally, your program would be written in JavaScript and use [BextJS](https://github.com/asweigart/bextjs) which provides Python-style `print()`, `sleep()`, and `input()` functions. This provides a way to easily show the generated output on the Scroll Art Museum website.
 

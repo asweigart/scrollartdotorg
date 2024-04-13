@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallpaper</title>
+</head>
+<body>
+
+<textarea id="outputTextarea" class="tatjsOutput" readonly style="height: calc(100vh - 40px); border: none;"></textarea><br />
+<button type="button" onclick="running = !running;">&#x23FB; Off</button>&nbsp;&nbsp;&nbsp;
+
+<input type="text" id="foregroundColorSetting" style="width: 70px">
+<input type="text" id="backgroundColorSetting" style="width: 70px">
+<button type="button" onclick="changeColorTheme(document.getElementById('foregroundColorSetting').value, document.getElementById('backgroundColorSetting').value)">&#x1F197;</button>
+<button type="button" onclick="swapColors();">&#x1F504;</button>&nbsp;&nbsp;&nbsp;&nbsp;
+
+<button type="button" onclick="changeColorTheme('black', 'white');">&#x1F4A1;</button>
+<button type="button" onclick="changeColorTheme('white', 'black');">&#x1F3B1;</button>
+<button type="button" onclick="changeColorTheme('white', '#A10901');">&#x2764;&#xFE0F;</button>
+<button type="button" onclick="changeColorTheme('#993D28', '#FCAF1B');">&#x1F36F;</button>
+<button type="button" onclick="changeColorTheme('#E7B6BF', '#924C38');">&#x1FAB5;</button>
+<button type="button" onclick="changeColorTheme('#F9F5D6', '#2E3672');">&#x1F327;&#xFE0F;</button>
+<button type="button" onclick="changeColorTheme('#1B2463', '#00003E');">&#x1F311;</button>
+<button type="button" onclick="changeColorTheme('#C2FA6F', '#554E80');">&#x1F9EA;</button>
+<button type="button" onclick="changeColorTheme('#FFE082', '#1565C0');">&#x1F324;&#xFE0F;</button>
+<button type="button" onclick="changeColorTheme('#00FF00', '#FF007F');">&#x1F349;</button>
+<button type="button" onclick="changeColorTheme('#9CD54A', '#4A5A20');">&#x1F334;</button>
+<button type="button" onclick="changeColorTheme('#08FF08', '#111111');">&#x1F60E;</button>
+
+
+<script src="/static/textarea_terminal.js"></script>
+<link rel="stylesheet" href="/static/textarea_terminal.css">
+
+
+<script>
+
+function setColorsBasedOnTextFields() {
+    let fg = document.getElementById('foregroundColorSetting').value;
+    let bg = document.getElementById('backgroundColorSetting').value;
+    changeColorTheme(fg, bg);
+}
+document.addEventListener('DOMContentLoaded', (event) => {
+document.getElementById('foregroundColorSetting').addEventListener('keydown', function(event) {
+    // Check if the Enter key was pressed
+    if (event.key === "Enter" || event.keyCode === 13) {
+        // Prevent the default action to avoid form submission or any other default behavior
+        event.preventDefault();
+        setColorsBasedOnTextFields();
+    }
+});
+document.getElementById('backgroundColorSetting').addEventListener('keydown', function(event) {
+    // Check if the Enter key was pressed
+    if (event.key === "Enter" || event.keyCode === 13) {
+        // Prevent the default action to avoid form submission or any other default behavior
+        event.preventDefault();
+        setColorsBasedOnTextFields();
+    }
+});
+});
+function changeColorTheme(foregroundColor, backgroundColor) {
+  document.body.style.backgroundColor = backgroundColor; 
+  document.getElementById('outputTextarea').style.backgroundColor = backgroundColor;
+  document.getElementById('outputTextarea').style.color = foregroundColor;
+  document.getElementById('foregroundColorSetting').value = foregroundColor;
+  document.getElementById('backgroundColorSetting').value = backgroundColor;
+}
+
+function swapColors() {
+  let fg = document.getElementById('foregroundColorSetting').value;
+  let bg = document.getElementById('backgroundColorSetting').value;
+  changeColorTheme(bg, fg);
+}
+
+
+//Wallpaper
+
+// This weird || logic is because the Pelican plugin that makes the fullscreen .html files only has outputTextarea
+const tat = new Tatjs(document.getElementById('outputTextarea'));
+const tat2 = new Tatjs(document.getElementById('outputTextarea2') || document.getElementById('outputTextarea'));
+const tat3 = new Tatjs(document.getElementById('outputTextarea3') || document.getElementById('outputTextarea'));
+const tat4 = new Tatjs(document.getElementById('outputTextarea4') || document.getElementById('outputTextarea'));
+const tat5 = new Tatjs(document.getElementById('outputTextarea5') || document.getElementById('outputTextarea'));
+const tat6 = new Tatjs(document.getElementById('outputTextarea6') || document.getElementById('outputTextarea'));
+const tat7 = new Tatjs(document.getElementById('outputTextarea7') || document.getElementById('outputTextarea'));
+const tat8 = new Tatjs(document.getElementById('outputTextarea8') || document.getElementById('outputTextarea'));
+const tat9 = new Tatjs(document.getElementById('outputTextarea9') || document.getElementById('outputTextarea'));
+
+
+let running = true;
+
+const WALLPAPER = 'shining carpet'
+
+const DELAY = 400
+const WIDTH = 200
+
+const WALLPAPER_PATTERNS = {  // Change as desired; All rows must be the same length.
+    'shining carpet': [
+        '_ \\ \\ \\_/ __',
+        ' \\ \\ \\___/ _',
+        '\\ \\ \\_____/ ',
+        '/ / / ___ \\_',
+        '_/ / / _ \\__',
+        '__/ / / \\___'
+    ],
+    'little hex': [
+        '/ \\_',
+        '\\_/ '
+    ],
+    'big hex': [
+        ' /   \\    ',
+        '/     \\___',
+        '\\     /   ',
+        ' \\___/    '
+    ],
+    'hex in hex': [
+        ' / __ \\ \\__/',
+        '/ /  \\ \\____',
+        '\\ \\__/ / __ ',
+        ' \\____/ /  \\'
+    ],
+    'bricks': [
+        '       |',
+        '_______|',
+        '   |    ',
+        '___|____'
+    ],
+    'clover': [
+        '\\__   ',
+        '/  \\__',
+        '\\     ',
+        '/   __',
+        '\\__/  ',
+        '/     '
+    ],
+    'skull': [
+        '/ ___ \\ ^ ',
+        ' /   \\ VVV',
+        '|() ()|   ',
+        ' \\ ^ / ___',
+        '\\ VVV /   ',
+        ')|   |() ('
+    ],
+    'leaves': [
+        '  /\\  ',
+        '_/  \\_',
+        '\\    /',
+        ' \\__/ '
+    ],
+    'angles': [
+    //    '\\/',
+    //    '/ ',
+    //    '\\ ',
+    //    '/\\',
+    //    ' /',
+    //    ' \\'
+        '  /\\  /\\',
+        '\\/  \\/  ',
+        '/   /   ',
+        '\\   \\   ',
+        '/\\  /\\  ',
+        '  \\/  \\/',
+        '  /   / ',
+        '  \\   \\ '
+    ]
+}
+
+
+async function main() {
+    const wallpaper_rows = WALLPAPER_PATTERNS[WALLPAPER];
+    const x_repeat = WIDTH; // wallpaper_rows[0])
+    let step = 0;
+
+    while (running) {
+        // Display each row in wallpaper_rows:
+        tat.print(WALLPAPER_PATTERNS['shining carpet'][step % WALLPAPER_PATTERNS['shining carpet'].length].repeat(x_repeat));
+        tat2.print(WALLPAPER_PATTERNS['little hex'][step % WALLPAPER_PATTERNS['little hex'].length].repeat(x_repeat));
+        tat3.print(WALLPAPER_PATTERNS['big hex'][step % WALLPAPER_PATTERNS['big hex'].length].repeat(x_repeat));
+        tat4.print(WALLPAPER_PATTERNS['hex in hex'][step % WALLPAPER_PATTERNS['hex in hex'].length].repeat(x_repeat));
+        tat5.print(WALLPAPER_PATTERNS['bricks'][step % WALLPAPER_PATTERNS['bricks'].length].repeat(x_repeat));
+        tat6.print(WALLPAPER_PATTERNS['clover'][step % WALLPAPER_PATTERNS['clover'].length].repeat(x_repeat));
+        tat7.print(WALLPAPER_PATTERNS['skull'][step % WALLPAPER_PATTERNS['skull'].length].repeat(x_repeat));
+        tat8.print(WALLPAPER_PATTERNS['leaves'][step % WALLPAPER_PATTERNS['leaves'].length].repeat(x_repeat));
+        tat9.print(WALLPAPER_PATTERNS['angles'][step % WALLPAPER_PATTERNS['angles'].length].repeat(x_repeat));
+        await sleep(DELAY);
+    
+        step += 1;
+    }
+}
+main();    
+
+
+</script>
+
+</body>
+</html>

@@ -1,13 +1,14 @@
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connected Pipes Scroll Art</title>
+    <title>Connected Pipes</title>
 </head>
 <body>
 
-<textarea id="bextOutput" readonly style="height: calc(100vh - 40px); border: none;"></textarea><br />
-<!--<input id="bextInput" readonly />-->
+<textarea id="outputTextarea" class="tatjsOutput" readonly style="height: calc(100vh - 40px); border: none;"></textarea><br />
 <button type="button" onclick="running = !running;">&#x23FB; Off</button>&nbsp;&nbsp;&nbsp;
 
 <input type="text" id="foregroundColorSetting" style="width: 70px">
@@ -26,10 +27,11 @@
 <button type="button" onclick="changeColorTheme('#FFE082', '#1565C0');">&#x1F324;&#xFE0F;</button>
 <button type="button" onclick="changeColorTheme('#00FF00', '#FF007F');">&#x1F349;</button>
 <button type="button" onclick="changeColorTheme('#9CD54A', '#4A5A20');">&#x1F334;</button>
+<button type="button" onclick="changeColorTheme('#08FF08', '#111111');">&#x1F60E;</button>
 
 
-<script src="/static/bext.js"></script>
-<link rel="stylesheet" href="/static/bext.css">
+<script src="/static/textarea_terminal.js"></script>
+<link rel="stylesheet" href="/static/textarea_terminal.css">
 
 
 <script>
@@ -59,8 +61,8 @@ document.getElementById('backgroundColorSetting').addEventListener('keydown', fu
 });
 function changeColorTheme(foregroundColor, backgroundColor) {
   document.body.style.backgroundColor = backgroundColor; 
-  document.getElementById('bextOutput').style.backgroundColor = backgroundColor;
-  document.getElementById('bextOutput').style.color = foregroundColor;
+  document.getElementById('outputTextarea').style.backgroundColor = backgroundColor;
+  document.getElementById('outputTextarea').style.color = foregroundColor;
   document.getElementById('foregroundColorSetting').value = foregroundColor;
   document.getElementById('backgroundColorSetting').value = backgroundColor;
 }
@@ -72,7 +74,9 @@ function swapColors() {
 }
 
 
-let bextRowBuffer = 256;  // Change this to whatever size you want, or -1 for infinite buffer.
+//Connected Pipes
+const tat = new Tatjs('outputTextarea', 'inputText');
+
 let running = true;
 // Constants for settings:
 const DELAY = 200;  // Pause after each row in milliseconds.
@@ -159,11 +163,13 @@ let prevRow = Array(WIDTH).fill(UP_LEFT_RIGHT_CHAR);
             row.push(char);
         }
 
-        print(row.join(''));
+        tat.print(row.join(''));
         prevRow = row;
         await sleep(DELAY);
     }
 })();
+
+
 
 </script>
 

@@ -1,25 +1,31 @@
 Title: Proton Stream
 Date: 2024-03-23 10:00
-Modified: 2024-03-23 10:00
 Authors: Al Sweigart
-Summary: <a href="{filename}proton-stream.md">Lighting streams from a ghost exterminator's device.<br><img src="{static}/images/proton-stream-screenshot.webp" style="max-width: 640px;"></a>
+Summary: <a href="{filename}proton-stream.md">Lightning streams from a ghost exterminator's device. Click here to view the animation...<br><img src="{static}/images/proton-stream-screenshot.webp" class="scrollArtPreview"></a>
 og_image: proton-stream-screenshot.webp
-og_description: Lighting streams from a ghost exterminator's device.
+og_description: Lightning streams from a ghost exterminator's device.
 
-<img src="{static}/images/proton-stream-screenshot.webp" style="max-width: 640px;">
+<!-- For some reason, we need this image otherwise the screenshot in the Summary won't appear. I have display: none because I don't want the image to show up in the page. -->
+<img src="{static}/images/proton-stream-screenshot.webp" style="display: none;">
+
+
+**[VIEW FULLSCREEN](/static/proton-stream-fullscreen.html)**
+
+<div><textarea id="outputTextarea" readonly class="tatjsOutput" style="height: 400px;"></textarea><br /><button type="button" onclick="running = !running;">&#x23FB; Off</button></div>
+
 
 Multiple streams that are always within a set range of each other.
 
-* **[VIEW FULLSCREEN](/static/proton-stream-fullscreen.html)**
+Links
+=====
+
 * [Python source code](https://github.com/asweigart/scrollart/blob/main/python/protonstream.py)
 * [JavaScript source code in JSFiddle](https://jsfiddle.net/asweigart/7amoxbzg/)
 
-<div><textarea id="bextOutput" readonly style="height: 400px;"></textarea><br /><button type="button" onclick="running = !running;">&#x23FB; Off</button></div>
-
-<script src="/static/bext.js"></script><link rel="stylesheet" href="/static/bext.css">
+<script src="/static/textarea_terminal.js"></script><link rel="stylesheet" href="/static/textarea_terminal.css">
 <script>// SCROLL CODE:Proton Stream
+const tat = new Tatjs(document.getElementById('outputTextarea'));
 
-let bextRowBuffer = 256;  // Change this to whatever size you want, or -1 for infinite buffer.
 let running = true;
 
 // Constants for settings:
@@ -34,10 +40,6 @@ const STREAM_CHARS = 'oO@';
 
 let streams = Array(NUM_STREAMS).fill(Math.floor(WIDTH / 2));
 
-
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
 
 (async function main() {
     while (running) {
@@ -80,7 +82,7 @@ function sleep(ms) {
         }
         */
 
-        print(columns.join(''));
+        tat.print(columns.join(''));
         await sleep(DELAY);
     }
 })();

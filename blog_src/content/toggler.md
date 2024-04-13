@@ -1,44 +1,58 @@
 Title: Toggler
 Date: 2024-03-04 10:07
-Modified: 2024-03-04 10:07
 Authors: Al Sweigart
-Summary: <a href="{filename}toggler.md">Triangular patterns toggled between two characters, with variants.<br><img src="{static}/images/toggler1-screenshot.webp" style="max-width: 640px;"></a>
+Summary: <a href="{filename}toggler.md">Triangular patterns toggled between two characters, with variants. Click here to view the animation...<br><img src="{static}/images/toggler1-screenshot.webp" class="scrollArtPreview"></a>
 og_image: toggler1-screenshot.webp
 og_description: Triangular patterns toggled between two characters, with variants.
 
-<img src="{static}/images/toggler1-screenshot.webp" style="max-width: 640px;">
+<!-- For some reason, we need this image otherwise the screenshot in the Summary won't appear. I have display: none because I don't want the image to show up in the page. -->
+<img src="{static}/images/toggler1-screenshot.webp" style="display: none;">
+
+
+Toggler 1 **[VIEW FULLSCREEN](/static/toggler-1-fullscreen.html)**
+
+<div><textarea id="outputTextarea1" readonly class="tatjsOutput" style="height: 400px;"></textarea><br /><button type="button" onclick="running = !running;">&#x23FB; Off</button></div>
+
+Toggler 2 **[VIEW FULLSCREEN](/static/toggler-2-fullscreen.html)**
+
+<div><textarea id="outputTextarea2" readonly class="tatjsOutput" style="height: 400px;"></textarea><br /><button type="button" onclick="running = !running;">&#x23FB; Off</button></div>
+
+
 
 In "Toggler 1", each column prints one of two characters. Randomly, a "toggler" appears and switches which character the column prints and then moves to the left or right. This creates triangle-shaped regions of toggled values. As more togglers spawn and overlap, the implied shapes become more chaotic and inscrutable. "Toggler 2" is similar, though it creates two togglers going in both directions, sometimes skipping one or two columns as they move.
 
+Links
+=====
+
 Toggler 1:
 
-* **[VIEW FULLSCREEN](/static/toggler-1-fullscreen.html)**
 * [Python source code](https://github.com/asweigart/scrollart/blob/main/python/toggler1.py)
 * [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/toggler1.ts)
 * [JavaScript source code in JSFiddle](https://jsfiddle.net/asweigart/q5hc9tLf/)
 
 Toggler 2:
 
-* **[VIEW FULLSCREEN](/static/toggler-2-fullscreen.html)**
 * [Python source code](https://github.com/asweigart/scrollart/blob/main/python/toggler2.py)
 * [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/toggler2.ts)
 * [JavaScript source code in JSFiddle](https://jsfiddle.net/asweigart/t35mx9pc/)
 
 
-<div><textarea id="bextOutput" readonly style="height: 400px;"></textarea><br /><button type="button" onclick="running = !running;">&#x23FB; Off</button></div>
-<script src="/static/bext.js"></script><link rel="stylesheet" href="/static/bext.css">
-<script>// SCROLL CODE:Toggler 1
 
-bextRowBuffer = 256;  // Change this to whatever size you want, or -1 for infinite buffer.
-let width = 220;
-let running = true;
-const DELAY = 50;
-const TRUE_CHAR = '@';
-const FALSE_CHAR = '.';
-const TOGGLER_DENSITY = 0.10;
-const MOVEMENTS = [1, -1];
+<script src="/static/textarea_terminal.js"></script><link rel="stylesheet" href="/static/textarea_terminal.css">
+<script>// SCROLL CODE:Toggler 1
+running = true;
+
 
 async function main() {
+    const tat = new Tatjs(document.getElementById('outputTextarea1') || document.getElementById('outputTextarea'));
+
+    let width = 220;
+    const DELAY = 50;
+    const TRUE_CHAR = '@';
+    const FALSE_CHAR = '.';
+    const TOGGLER_DENSITY = 0.10;
+    const MOVEMENTS = [1, -1];
+
     let columnChars = Array.from({length: width}, () => false);
     let togglers = [];
 
@@ -72,26 +86,29 @@ async function main() {
                 line += FALSE_CHAR;
             }
         }
-        print(line);
+        tat.print(line);
         await sleep(DELAY);
     }
 }
 
-main();
+setTimeout(main, 0);
 </script>
 
-<!-- This commented out code is so that the Pelican plugin can generate the fullscreen version of toggler2.
+
 <script>// SCROLL CODE:Toggler 2
-bextRowBuffer = 256;  // Change this to whatever size you want, or -1 for infinite buffer.
-let width = 220;
-let running = true;
-const DELAY = 50;
-const TRUE_CHAR = '@';
-const FALSE_CHAR = '.';
-const TOGGLER_DENSITY = 0.10;
-const MOVEMENTS = [1, 2, 3];
+running = true;
 
 async function main() {
+    const tat = new Tatjs(document.getElementById('outputTextarea2') || document.getElementById('outputTextarea'));
+
+    let width = 220;
+    const DELAY = 50;
+    const TRUE_CHAR = '@';
+    const FALSE_CHAR = '.';
+    const TOGGLER_DENSITY = 0.10;
+    const MOVEMENTS = [1, 2, 3];
+
+
     let columnChars = Array.from({length: width}, () => false);
     let togglers = [];
 
@@ -135,7 +152,7 @@ async function main() {
                 line += FALSE_CHAR;
             }
         }
-        print(line);
+        tat.print(line);
         await sleep(DELAY);
     }
 }
