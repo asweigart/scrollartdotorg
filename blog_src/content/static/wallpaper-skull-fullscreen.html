@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallpaper Skull</title>
+</head>
+<body>
+
+<textarea id="outputTextarea" class="tatjsOutput" readonly style="height: calc(100vh - 40px); border: none;"></textarea><br />
+
+<div id="fullscreenControls">
+<button type="button" onclick="running = !running;">&#x23FB; Off</button>&nbsp;&nbsp;&nbsp;
+
+<input type="text" id="foregroundColorSetting" style="width: 70px">
+<input type="text" id="backgroundColorSetting" style="width: 70px">
+<button type="button" onclick="changeColorTheme(document.getElementById('foregroundColorSetting').value, document.getElementById('backgroundColorSetting').value)">&#x1F197;</button>
+<button type="button" onclick="swapColors();">&#x1F504;</button>&nbsp;&nbsp;&nbsp;&nbsp;
+
+<button type="button" onclick="changeColorTheme('black', 'white');">&#x1F4A1;</button>
+<button type="button" onclick="changeColorTheme('white', 'black');">&#x1F3B1;</button>
+<button type="button" onclick="changeColorTheme('white', '#A10901');">&#x2764;&#xFE0F;</button>
+<button type="button" onclick="changeColorTheme('#993D28', '#FCAF1B');">&#x1F36F;</button>
+<button type="button" onclick="changeColorTheme('#1B2463', '#00003E');">&#x1F319;</button>
+<button type="button" onclick="changeColorTheme('#C2FA6F', '#554E80');">&#x1F9EA;</button>
+<button type="button" onclick="changeColorTheme('#FFE082', '#1565C0');">&#x1F324;&#xFE0F;</button>
+<button type="button" onclick="changeColorTheme('#E7B6BF', '#924C38');">&#x1FAB5;</button>
+<button type="button" onclick="changeColorTheme('#00FF00', '#FF007F');">&#x1F349;</button>
+<button type="button" onclick="changeColorTheme('#9CD54A', '#4A5A20');">&#x1F334;</button>
+<button type="button" onclick="changeColorTheme('#08FF08', '#111111');">&#x1F60E;</button>
+
+&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" onclick="document.getElementById('fullscreenControls').style.display = 'none'; document.getElementById('outputTextarea').style.height = '100vh';">X</button>
+
+</div>
+
+<script src="/static/textarea_terminal.js"></script>
+<link rel="stylesheet" href="/static/textarea_terminal.css">
+
+
+<script>
+
+function setColorsBasedOnTextFields() {
+    let fg = document.getElementById('foregroundColorSetting').value;
+    let bg = document.getElementById('backgroundColorSetting').value;
+    changeColorTheme(fg, bg);
+}
+document.addEventListener('DOMContentLoaded', (event) => {
+document.getElementById('foregroundColorSetting').addEventListener('keydown', function(event) {
+    // Check if the Enter key was pressed
+    if (event.key === "Enter" || event.keyCode === 13) {
+        // Prevent the default action to avoid form submission or any other default behavior
+        event.preventDefault();
+        setColorsBasedOnTextFields();
+    }
+});
+document.getElementById('backgroundColorSetting').addEventListener('keydown', function(event) {
+    // Check if the Enter key was pressed
+    if (event.key === "Enter" || event.keyCode === 13) {
+        // Prevent the default action to avoid form submission or any other default behavior
+        event.preventDefault();
+        setColorsBasedOnTextFields();
+    }
+});
+});
+function changeColorTheme(foregroundColor, backgroundColor) {
+  document.body.style.backgroundColor = backgroundColor; 
+  document.getElementById('outputTextarea').style.backgroundColor = backgroundColor;
+  document.getElementById('outputTextarea').style.color = foregroundColor;
+  document.getElementById('foregroundColorSetting').value = foregroundColor;
+  document.getElementById('backgroundColorSetting').value = backgroundColor;
+}
+
+function swapColors() {
+  let fg = document.getElementById('foregroundColorSetting').value;
+  let bg = document.getElementById('backgroundColorSetting').value;
+  changeColorTheme(bg, fg);
+}
+
+
+//Wallpaper Skull
+
+running = true;
+
+async function main7() {    
+    const tat = new Tatjs(document.getElementById('outputTextarea7') || document.getElementById('outputTextarea'));
+    const DELAY = 400
+    const WIDTH = 200
+    const wallpaper_rows = [
+        '/ ___ \\ ^ ',
+        ' /   \\ VVV',
+        '|() ()|   ',
+        ' \\ ^ / ___',
+        '\\ VVV /   ',
+        ')|   |() ('
+    ];
+
+    const x_repeat = Math.floor(WIDTH / wallpaper_rows.length);
+    let step = 0;
+
+    while (running) {
+        // Display each row in wallpaper_rows:
+        tat.print(wallpaper_rows[step % wallpaper_rows.length].repeat(x_repeat));
+        await sleep(DELAY);
+        step += 1;
+    }
+}
+setTimeout(main7, 0);
+
+
+</script>
+
+</body>
+</html>

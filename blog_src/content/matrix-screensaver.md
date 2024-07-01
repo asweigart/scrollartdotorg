@@ -1,26 +1,31 @@
 Title: Matrix Screensaver
 Date: 2024-03-04 10:06
-Modified: 2024-03-04 10:06
 Authors: Al Sweigart
-Summary: <a href="{filename}matrix-screensaver.md">Hacker-themed trails of ones and zeros.<br><img src="{static}/images/matrix-screensaver-screenshot.webp" style="max-width: 640px;"></a>
+Summary: <a href="{filename}matrix-screensaver.md">Hacker-themed trails of ones and zeros. Click here to view the animation...<br><img src="{static}/images/matrix-screensaver-screenshot.webp" class="scrollArtPreview"></a>
 og_image: matrix-screensaver-screenshot.webp
 og_description: Hacker-themed trails of ones and zeros.
 
-<img src="{static}/images/matrix-screensaver-screenshot.webp" style="max-width: 640px;">
+<!-- For some reason, we need this image otherwise the screenshot in the Summary won't appear. I have display: none because I don't want the image to show up in the page. -->
+<img src="{static}/images/matrix-screensaver-screenshot.webp" style="display: none;">
+
+
+**[VIEW FULLSCREEN](/static/matrixscreensaver-fullscreen.html)**
+
+<div><textarea id="outputTextarea" readonly class="tatjsOutput" style="height: 400px;"></textarea><br /><button type="button" onclick="running = !running;">&#x23FB; Off</button></div>
+
 
 The Matrix is a 1999 hacker movie that had an iconic "digital stream" of green alphanumerics scrolling down the screen like trails of rain down a window. Several [screensavers](https://en.wikipedia.org/wiki/Screensaver) were created to mimic this design. This scroll art follows suit, though streaming upwards due to the limitations of scroll art.
 
+Links
+=====
 
-* **[VIEW FULLSCREEN](/static/matrixscreensaver-fullscreen.html)**
 * [Python source code](https://github.com/asweigart/scrollart/blob/main/python/matrixscreensaver.py)
 * [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/matrixscreensaver.ts)
 * [JavaScript source code in JSFiddle](https://jsfiddle.net/asweigart/ha1fb9z3/)
 
-<div><textarea id="bextOutput" readonly style="height: 400px;"></textarea><br /><button type="button" onclick="running = !running;">&#x23FB; Off</button></div>
-<script src="/static/bext.js"></script><link rel="stylesheet" href="/static/bext.css">
-<script>
-
-bextRowBuffer = 256;  // Change this to whatever size you want, or -1 for infinite buffer.
+<script src="/static/textarea_terminal.js"></script><link rel="stylesheet" href="/static/textarea_terminal.css">
+<script>// SCROLL CODE:MatrixScreensaver
+const tat = new Tatjs(document.getElementById('outputTextarea'));
 
 let running = true;
 let width = 220;
@@ -51,7 +56,7 @@ async function main() {
                 line += ' ';
             }
         }
-        print(line);
+        tat.print(line);
         await sleep(DELAY);
     }
 }

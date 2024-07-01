@@ -1,25 +1,31 @@
 Title: Ducklings
 Date: 2024-03-04 10:04
-Modified: 2024-03-04 10:04
 Authors: Al Sweigart
-Summary: <a href="{filename}ducklings.md">Cute combinatorial explosion of ASCII art ducks.<br><img src="{static}/images/ducklings-screenshot.webp" style="max-width: 640px;"></a><br>
+Summary: <a href="{filename}ducklings.md">Cute combinatorial explosion of ASCII art ducks. Click here to view the animation...<br><img src="{static}/images/ducklings-screenshot.webp" class="scrollArtPreview"></a><br>
 og_image: ducklings-screenshot.webp
 og_description: Cute combinatorial explosion of ASCII art ducks.
 
-<img src="{static}/images/ducklings-screenshot.webp" style="max-width: 640px;">
+<!-- For some reason, we need this image otherwise the screenshot in the Summary won't appear. I have display: none because I don't want the image to show up in the page. -->
+<img src="{static}/images/ducklings-screenshot.webp" style="display: none;">
 
-"Ducklings" generates a wide variety of duckling ASCII art. The ducklings have multiple possible directions (left or right), eyes (aloof, happy, or wide), bills (open or closed), wing direction (out, up, or down), and body size (chubby and very chubby) for 24 different styles.
 
-* **[VIEW FULLSCREEN](/static/ducklings-fullscreen.html)**
+**[VIEW FULLSCREEN](/static/ducklings-fullscreen.html)**
+
+<div><textarea id="outputTextarea" readonly class="tatjsOutput" style="height: 400px;"></textarea><br /><button type="button" onclick="running = !running;">&#x23FB; Off</button></div>
+
+"Ducklings" generates duckling ASCII art. The ducklings have different possible directions (left or right), eyes (aloof, happy, or wide), bills (open or closed), wing direction (out, up, or down), and body size (chubby and very chubby) for 24 different styles.
+
+Links
+=====
+
 * [Python source code](https://github.com/asweigart/scrollart/blob/main/python/ducklings.py)
 * [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/ducklings.ts)
 * [JavaScript source code in JSFiddle](https://jsfiddle.net/asweigart/o4sgvucn/)
 
-<div><textarea id="bextOutput" readonly style="height: 400px;"></textarea><br /><button type="button" onclick="running = !running;">&#x23FB; Off</button></div>
-<script src="/static/bext.js"></script><link rel="stylesheet" href="/static/bext.css">
-<script>
+<script src="/static/textarea_terminal.js"></script><link rel="stylesheet" href="/static/textarea_terminal.css">
+<script>// SCROLL CODE:Ducklings
+const tat = new Tatjs(document.getElementById('outputTextarea'));
 
-bextRowBuffer = 256;  // Change this to whatever size you want, or -1 for infinite buffer.
 const DELAY = 150;
 let width = 220;
 const DENSITY = 0.10;
@@ -196,7 +202,7 @@ async function main() {
                 line += ' '.repeat(DUCKLING_WIDTH);
             }
         }
-        print(line);
+        tat.print(line);
         await sleep(DELAY);
     }
 }

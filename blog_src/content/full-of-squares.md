@@ -1,27 +1,32 @@
 Title: Full of Squares
 Date: 2024-03-23 10:00
-Modified: 2024-03-23 10:00
 Authors: Al Sweigart
-Summary: <a href="{filename}full-of-squares.md">Squares of various sizes.<br><img src="{static}/images/full-of-squares-screenshot.webp" style="max-width: 640px;"></a>
+Summary: <a href="{filename}full-of-squares.md">Squares of various sizes. Click here to view the animation...<br><img src="{static}/images/full-of-squares-screenshot.webp" class="scrollArtPreview"></a>
 og_image: full-of-squares-screenshot.webp
 og_description: Squares of various sizes.
 
-<img src="{static}/images/full-of-squares-screenshot.webp" style="max-width: 640px;">
+<!-- For some reason, we need this image otherwise the screenshot in the Summary won't appear. I have display: none because I don't want the image to show up in the page. -->
+<img src="{static}/images/full-of-squares-screenshot.webp" style="display: none;">
+
+
+**[VIEW FULLSCREEN](/static/full-of-squares-fullscreen.html)**
+
+<div><textarea id="outputTextarea" readonly class="tatjsOutput" style="height: 400px;"></textarea><br /><button type="button" onclick="running = !running;">&#x23FB; Off</button></div>
 
 The [box-drawing characters](https://en.wikipedia.org/wiki/Box-drawing_character) are used to draw squares of various sizes.
 
+Links
+=====
 
-* **[VIEW FULLSCREEN](/static/full-of-squares-fullscreen.html)**
 * [Python source code](https://github.com/asweigart/scrollart/blob/main/python/fullofsquares.py)
 * [JavaScript source code in JSFiddle](https://jsfiddle.net/asweigart/oqa41cjd/)
 
-<div><textarea id="bextOutput" readonly style="height: 400px;"></textarea><br /><button type="button" onclick="running = !running;">&#x23FB; Off</button></div>
 
-<script src="/static/bext.js"></script><link rel="stylesheet" href="/static/bext.css">
-<script>
+<script src="/static/textarea_terminal.js"></script><link rel="stylesheet" href="/static/textarea_terminal.css">
+<script>// SCROLL CODE:Full of Squares
+const tat = new Tatjs(document.getElementById('outputTextarea'));
 
 
-let bextRowBuffer = 256;  // Change this to whatever size you want, or -1 for infinite buffer.
 let running = true;
 // Constants for settings:
 const DELAY = 100;  // Pause after each row in milliseconds.
@@ -115,7 +120,7 @@ async function main() {
         }
 
         // Print the row and then remove it:
-        print(nextRows[0].join(''));
+        tat.print(nextRows[0].join(''));
         nextRows.shift();
 
         // Pause for a bit before printing the next row:

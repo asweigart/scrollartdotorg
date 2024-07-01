@@ -1,25 +1,29 @@
 Title: Tri Grid Scaffolding
 Date: 2024-03-04 10:11
-Modified: 2024-03-04 10:11
 Authors: Al Sweigart
-Summary: <a href="{filename}tri-grid-scaffolding.md">A triangular grid in cyclic densities.<br><img src="{static}/images/tri-grid-scaffolding-screenshot.webp" style="max-width: 640px;"></a>
+Summary: <a href="{filename}tri-grid-scaffolding.md">A triangular grid in cyclic densities. Click here to view the animation...<br><img src="{static}/images/tri-grid-scaffolding-screenshot.webp" class="scrollArtPreview"></a>
 og_image: tri-grid-scaffolding-screenshot.webp
 og_description: A triangular grid in cyclic densities.
 
-<img src="{static}/images/tri-grid-scaffolding-screenshot.webp" style="max-width: 640px;">
+<!-- For some reason, we need this image otherwise the screenshot in the Summary won't appear. I have display: none because I don't want the image to show up in the page. -->
+<img src="{static}/images/tri-grid-scaffolding-screenshot.webp" style="display: none;">
+
+
+**[VIEW FULLSCREEN](/static/trigridscaffolding-fullscreen.html)**
+
+<div><textarea id="outputTextarea" readonly class="tatjsOutput" style="height: 400px;"></textarea><br /><button type="button" onclick="running = !running;">&#x23FB; Off</button></div>
+
 
 "Tri Grid Scaffolding" presents a grid of triangles that is slowly filled in and then dismantled each cycle. 
 
-* **[VIEW FULLSCREEN](/static/trigridscaffolding-fullscreen.html)**
 * [Python source code](https://github.com/asweigart/scrollart/blob/main/python/trigridscaffolding.py)
 * [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/trigridscaffolding.ts)
 * [JavaScript source code in JSFiddle](https://jsfiddle.net/asweigart/cod509ph/)
 
-<div><textarea id="bextOutput" readonly style="height: 400px;"></textarea><br /><button type="button" onclick="running = !running;">&#x23FB; Off</button></div>
-<script src="/static/bext.js"></script><link rel="stylesheet" href="/static/bext.css">
-<script>
+<script src="/static/textarea_terminal.js"></script><link rel="stylesheet" href="/static/textarea_terminal.css">
+<script>// SCROLL CODE:TriGridScaffolding
+const tat = new Tatjs(document.getElementById('outputTextarea'));
 
-bextRowBuffer = 256;  // Change this to whatever size you want, or -1 for infinite buffer.
 let width = 220
 const DELAY = 60;
 let CHANGE_AMOUNT = 0.04;
@@ -77,9 +81,9 @@ async function main() {
                 }
             }
 
-            print(row1);
+            tat.print(row1);
             await sleep(DELAY);
-            print(row2);
+            tat.print(row2);
             await sleep(DELAY);
         }
     }

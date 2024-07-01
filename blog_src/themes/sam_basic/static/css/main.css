@@ -38,3 +38,7 @@ pre {
     white-space: pre-wrap;
 }
 
+
+.scrollArtPreview {
+    max-width: calc(min(100%, 640px));
+}

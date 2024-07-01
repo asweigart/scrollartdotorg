@@ -1,27 +1,32 @@
 Title: Diamond Sky
 Date: 2024-03-23 10:00
-Modified: 2024-03-23 10:00
 Authors: Al Sweigart
-Summary: <a href="{filename}diamond-sky.md">Diamonds of various sizes.<br><img src="{static}/images/diamond-sky-screenshot.webp" style="max-width: 640px;"></a>
+Summary: <a href="{filename}diamond-sky.md">A star- and diamond-filled sky. Click here to view the animation...<br><img src="{static}/images/diamond-sky-screenshot.webp" class="scrollArtPreview"></a>
 og_image: diamond-sky-screenshot.webp
-og_description: Diamonds of various sizes.
+og_description: A star- and diamond-filled sky.
 
-<img src="{static}/images/diamond-sky-screenshot.webp" style="max-width: 640px;">
+<!-- For some reason, we need this image otherwise the screenshot in the Summary won't appear. I have display: none because I don't want the image to show up in the page. -->
+<img src="{static}/images/diamond-sky-screenshot.webp" style="display: none;">
 
-Diamonds of various sizes.
 
+**[VIEW FULLSCREEN](/static/diamond-sky-fullscreen.html)**
 
-* **[VIEW FULLSCREEN](/static/diamond-sky-fullscreen.html)**
+<div><textarea id="outputTextarea" readonly class="tatjsOutput" style="height: 400px;"></textarea><br /><button type="button" onclick="running = !running;">&#x23FB; Off</button></div>
+
+This piece is based on [*Project 16 - Diamonds*](https://inventwithpython.com/bigbookpython/project16.html) from my free programming book, [*The Big Book of Small Python Projects*](https://inventwithpython.com/bigbookpython/project16.html) for creating ASCII art diamonds of various sizes. I made [*Diamond Sky*]({filename}diamond-sky.md) before I created [*Full of Squares*]({filename}full-of-squares.md) but they share similar styles.
+
+This is the first piece where the code has a `rows` array that contains the next few rows to display. If the program randomly generates a diamond that is 12 rows high, the `rows` array is expanded to fit the next 12 rows. This form of scroll art, which I call *row buffer*, is a bit more advanced than the [*Wallpaper*]({filename}wallpaper.md) style of a repeating static pattern, and I feel the effect is much more interesting to view.
+
+Links
+=====
+
 * [Python source code](https://github.com/asweigart/scrollart/blob/main/python/diamondsky.py)
 * [JavaScript source code in JSFiddle](https://jsfiddle.net/asweigart/7x15u60w/)
 
-<div><textarea id="bextOutput" readonly style="height: 400px;"></textarea><br /><button type="button" onclick="running = !running;">&#x23FB; Off</button></div>
+<script src="/static/textarea_terminal.js"></script><link rel="stylesheet" href="/static/textarea_terminal.css">
+<script>// SCROLL CODE:Diamond Sky
+const tat = new Tatjs(document.getElementById('outputTextarea'));
 
-<script src="/static/bext.js"></script><link rel="stylesheet" href="/static/bext.css">
-<script>
-
-
-let bextRowBuffer = 256;  // Change this to whatever size you want, or -1 for infinite buffer.
 let running = true;
 
 // Code adapted from my diamonds.py program here: https://inventwithpython.com/bigbookpython/project16.html
@@ -95,7 +100,7 @@ async function main() {
         }
 
         // Print the row and then remove it:
-        print(nextRows[0].join(''));
+        tat.print(nextRows[0].join(''));
         nextRows.shift();
 
         // Pause for a bit before printing the next row:

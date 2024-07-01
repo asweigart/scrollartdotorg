@@ -4,7 +4,7 @@ Modified: 2024-03-04 10:00
 Authors: Al Sweigart
 Summary: About the SAM.
 
-The Scroll Art Museum is an online gallery of scroll art. Scroll art is a form of [ASCII art](https://en.wikipedia.org/wiki/ASCII_art) where a program generates output in a command line terminal. After the terminal window fills it begins to scroll the text upwards, creating an animated effect. The SAM is a collection of several scroll art examples.
+Scroll art is a form of [ASCII art](https://en.wikipedia.org/wiki/ASCII_art) where a program generates text output in a command line terminal. After the terminal window fills, it begins to scroll the text upwards and create an animated effect. The SAM is a online collection of several scroll art examples.
 
 Click the "VIEW FULLSCREEN" link on the scroll art web pages for the best viewing experience.
 
@@ -108,3 +108,4 @@ Who is Al Sweigart?
 Al Sweigart coined the term "scroll art" and is the curator of [scrollart.org](https://scrollart.org). He has written several programming books for beginners, including [Automate the Boring Stuff with Python](https://automatetheboringstuff.com). All of his books are freely available under a Creative Commons license at [https://inventwithpython.com](https://inventwithpython.com). His [The Big Book of Small Python Projects]() has several "scroll art" animated works, which he later expanded upon to create "scroll art" and the SAM.
 
 
+Proudly powered by <a rel="nofollow" href="https://getpelican.com/">Pelican</a>, which takes great advantage of <a rel="nofollow" href="https://www.python.org/">Python</a>.

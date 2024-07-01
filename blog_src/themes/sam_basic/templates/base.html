@@ -70,6 +70,7 @@
   
 <!-- Using MathJax, with the delimiters $ -->
 <!-- Conflict with pygments for the .mo and .mi -->
+<!-- Sweigart commented out mathjax stuff.
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
   "HTML-CSS": {
@@ -79,8 +80,12 @@
   tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']],processEscapes: true}
   });
 </script>
+-->
 
+<!-- This CDN reports that this URL is being retired. I don't think I need this library at all anyway, 
+    so I commented it out.
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+-->
 <!-- End of copy/pasted section from "basic" template. -->
 
 <!-- Start of custom template changes by Sweigart -->
@@ -116,7 +121,7 @@
         {% endfor %}
         {% if DISPLAY_PAGES_ON_MENU %}
           {% for p in pages %}
-            <li><a href="{{ SITEURL }}/{{ p.url }}" {% if p==page %} aria-current="page" {% endif %}>{{ p.title }}</a></li>
+            <a href="{{ SITEURL }}/{{ p.url }}" {% if p==page %} aria-current="page" {% endif %}>{{ p.title }}</a>{% if not loop.last %} | {% endif %}
           {% endfor %}
         {% endif %}
         {% if DISPLAY_CATEGORIES_ON_MENU %}
@@ -131,10 +136,6 @@
         {% endblock %}
         </main>
         <footer>
-                <address>
-                Proudly powered by <a rel="nofollow" href="https://getpelican.com/">Pelican</a>,
-                which takes great advantage of <a rel="nofollow" href="https://www.python.org/">Python</a>.
-                </address>
         </footer>
 </body>
 </html>

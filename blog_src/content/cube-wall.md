@@ -2,11 +2,13 @@ Title: Cube Wall
 Date: 2024-03-04 10:03
 Modified: 2024-03-04 10:03
 Authors: Al Sweigart
-Summary: <a href="{filename}cube-wall.md">Random cube wallpaper.<br><img src="{static}/images/cube-wall-screenshot.webp" style="max-width: 640px;"></a>
+Summary: <a href="{filename}cube-wall.md">Random cube wallpaper. Click here to view the animation...<br><img src="{static}/images/cube-wall-screenshot.webp" class="scrollArtPreview"></a>
 og_image: cube-wall-screenshot.webp
 og_description: Random cube wallpaper.
 
-<img src="{static}/images/cube-wall-screenshot.webp" style="max-width: 640px;">
+<!-- For some reason, we need this image otherwise the screenshot in the Summary won't appear. I have display: none because I don't want the image to show up in the page. -->
+<img src="{static}/images/cube-wall-screenshot.webp" style="display: none;">
+
 
 "Cube Wall" has a subtly 3D look by adding random shading to the cubes it draws.
 
@@ -16,11 +18,11 @@ og_description: Random cube wallpaper.
 * [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/cubewall.ts)
 * [JavaScript source code in JSFiddle](https://jsfiddle.net/asweigart/5Lz0wfbr/)
 
-<div><textarea id="bextOutput" readonly style="height: 400px;"></textarea><br /><button type="button" onclick="running = !running;">&#x23FB; Off</button></div>
-<script src="/static/bext.js"></script><link rel="stylesheet" href="/static/bext.css">
-<script>
+<div><textarea id="outputTextarea" readonly class="tatjsOutput" style="height: 400px;"></textarea><br /><button type="button" onclick="running = !running;">&#x23FB; Off</button></div>
+<script src="/static/textarea_terminal.js"></script><link rel="stylesheet" href="/static/textarea_terminal.css">
+<script>// SCROLL CODE:CubeWall
+const tat = new Tatjs(document.getElementById('outputTextarea'));
 
-bextRowBuffer = 256;  // Change this to whatever size you want, or -1 for infinite buffer.
 const DELAY = 100;
 const DENSITY = 0.35;
 const width = 220;
@@ -100,12 +102,12 @@ async function main() {
             row6 += `  \\${bottom1ShadingBottom}\\/${top2ShadingBottom}/  `;
         }
 
-        print(row1); await sleep(DELAY);
-        print(row2); await sleep(DELAY);
-        print(row3); await sleep(DELAY);
-        print(row4); await sleep(DELAY);
-        print(row5); await sleep(DELAY);
-        print(row6); await sleep(DELAY);
+        tat.print(row1); await sleep(DELAY);
+        tat.print(row2); await sleep(DELAY);
+        tat.print(row3); await sleep(DELAY);
+        tat.print(row4); await sleep(DELAY);
+        tat.print(row5); await sleep(DELAY);
+        tat.print(row6); await sleep(DELAY);
     }
 }
 

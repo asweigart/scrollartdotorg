@@ -52,4 +52,9 @@ STATIC_PATHS = ['static']
 PAGE_EXCLUDES = ['static']
 ARTICLE_EXCLUDES = ['static']
 
+PLUGIN_PATHS = ['plugins']
+PLUGINS = ['sam_fullscreen_generate_plugin', 'sam_copy_files_to_output_dir']
 
+
+DISPLAY_CATEGORIES_ON_MENU = False
+#DISPLAY_PAGES_ON_MENU = False

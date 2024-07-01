@@ -2,25 +2,34 @@ Title: Striped Triangles
 Date: 2024-03-04 10:10
 Modified: 2024-03-04 10:10
 Authors: Al Sweigart
-Summary: <a href="{filename}striped-triangles.md">Striped triangles in cyclic densities.<br><img src="{static}/images/striped-triangles-screenshot.webp" style="max-width: 640px;"></a>
+Summary: <a href="{filename}striped-triangles.md">Striped triangles in cyclic densities. Click here to view the animation...<br><img src="{static}/images/striped-triangles-screenshot.webp" class="scrollArtPreview"></a>
 og_image: striped-triangles-screenshot.webp
 og_description: Striped triangles in cyclic densities.
 
-<img src="{static}/images/striped-triangles-screenshot.webp" style="max-width: 640px;">
+<!-- For some reason, we need this image otherwise the screenshot in the Summary won't appear. I have display: none because I don't want the image to show up in the page. -->
+<img src="{static}/images/striped-triangles-screenshot.webp" style="display: none;">
+
+
+**[VIEW FULLSCREEN](/static/stripedtriangles-fullscreen.html)**
+
+<div><textarea id="outputTextarea" readonly class="tatjsOutput" style="height: 400px;"></textarea><br /><button type="button" onclick="running = !running;">&#x23FB; Off</button></div>
+
+
 
 "Striped Triangles" follows the increasing/decreasing density cycles of [Starfield]({filename}starfield.md) and a triangular grid structure like [Tri Grid Scaffolding]({filename}tri-grid-scaffolding.md). However, the triangles are one of four striped designs using the back and forward slashes. Notice how the triangles taken on a woven, wood-knot look at certain densities.
 
-* **[VIEW FULLSCREEN](/static/stripedtriangles-fullscreen.html)**
+Links
+=====
+
 * [Python source code](https://github.com/asweigart/scrollart/blob/main/python/stripedtriangles.py)
 * [TypeScript source code (compiles to Node JavaScript)](https://github.com/asweigart/scrollart/blob/main/typescript/stripedtriangles.ts)
 * [JavaScript source code in JSFiddle](https://jsfiddle.net/asweigart/f1pwqtez/)
 
-<textarea id="bextOutput" readonly style="height: 400px;"></textarea><br />
-<button type="button" onclick="running = !running;">&#x23FB; Off</button>
-<script src="/static/bext.js"></script><link rel="stylesheet" href="/static/bext.css">
-<script>
 
-bextRowBuffer = 256;  // Change this to whatever size you want, or -1 for infinite buffer.
+<script src="/static/textarea_terminal.js"></script><link rel="stylesheet" href="/static/textarea_terminal.css">
+<script>// SCROLL CODE:StripedTriangles
+const tat = new Tatjs(document.getElementById('outputTextarea'));
+
 let width = 220;
 let running = true;
 
@@ -82,11 +91,11 @@ async function main() {
                 row3 += ' ';
             }
         }
-        print(row1);
+        tat.print(row1);
         await sleep(DELAY);
-        print(row2);
+        tat.print(row2);
         await sleep(DELAY);
-        print(row3);
+        tat.print(row3);
         await sleep(DELAY);
         
         // Draw a row that starts with an upside down triangle on the left side.
@@ -126,11 +135,11 @@ async function main() {
                 row3 += '     ';
             }
         }
-        print(row1);
+        tat.print(row1);
         await sleep(DELAY);
-        print(row2);
+        tat.print(row2);
         await sleep(DELAY); 
-        print(row3);
+        tat.print(row3);
         await sleep(DELAY);
     }
 }
